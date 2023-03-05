@@ -1,0 +1,42 @@
+div {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px; }
+  div h1 {
+    color: green;
+    border-bottom: 1px solid blue; }
+  div section {
+    display: flex;
+    width: 100%; }
+    div section article {
+      border: 1px solid green;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px; }
+      div section article p {
+        text-align: center; }
+    div section .odd {
+      text-align: center;
+      width: 100%;
+      color: blue;
+      border: 1px solid green;
+      font-size: 1rem; }
+    div section .even {
+      text-align: center;
+      width: 100%;
+      color: red;
+      border: 1px solid green;
+      font-size: 1rem; }
+    div section .footer {
+      text-align: center;
+      width: 100%;
+      color: green;
+      border: 1px solid blue;
+      font-size: 24px;
+      margin-top: 15px; }
+
+/*# sourceMappingURL=style.css.map */
