@@ -1,0 +1,16 @@
+$color-primary: red;
+$color-secondary: blue;
+$color-tertiary: green;
+
+@function rem($font-size) {
+    $font-size: calc(#{$font-size}/16);
+    @return #{$font-size}rem;
+}
+
+@mixin article-card($color, $border-color, $font-size) {
+    text-align: center;
+    width: 100%;
+    color: $color;
+    border: 1px solid $border-color;
+    font-size: rem($font-size);
+}
