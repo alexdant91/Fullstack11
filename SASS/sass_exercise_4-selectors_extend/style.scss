@@ -1,0 +1,56 @@
+@use "functions" as f;
+
+div {
+    border: 1px solid f.$color-primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:15px;
+
+    %text{
+        text-align: center;
+        color: f.$color-tertiary;
+    }
+
+    h1 {
+        @extend %text;
+        border-bottom: 1px solid f.$color-secondary;
+    }
+
+    h2 {
+        @extend %text;
+        padding: 1rem;
+        border: 1px solid f.$color-primary;
+    }
+
+
+    section {
+        display: flex;
+        width: 100%;
+
+        article {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+
+            p {
+                text-align: center;
+            }
+        }
+
+        .odd {
+        @include f.article-card(f.$color-secondary, f.$color-tertiary, 16);
+        }
+        
+        .even {
+        @include f.article-card(f.$color-primary, f.$color-tertiary, 16);
+        }
+
+        .footer {
+        @include f.article-card(f.$color-tertiary, f.$color-secondary, 24);
+        margin-top: 15px;
+        }   
+    }   
+}
